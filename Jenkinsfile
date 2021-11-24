@@ -17,7 +17,7 @@ pipeline {
         stage('Build') {
             steps {
                 dir("/var/lib/jenkins//workspace/TSIFullStack/Movie_project_git") {
-                sh 'sudo mvn clean package'
+//                 sh 'sudo mvn clean package'
                     checkout scm
 //                 sh 'sudo su'
 //                 sh 'sudo rm -rf /var/lib/jenkins//workspace/TSIFullStack/Movie_project_git'
