@@ -15,6 +15,7 @@ pipeline {
             steps {
                 dir("/var/lib/jenkins//workspace/TSIFullStack/Movie_project_git") {
 //                 sh 'sudo mvn -B -DskipTests clean package'
+                sh 'rm -rf /var/lib/jenkins//workspace/TSIFullStack/Movie_project_git'
                 }
             }
         }
