@@ -13,7 +13,6 @@ class MovieProjectApplicationTests {
 	Movie testFilm = new Movie("movieName", 4, "Is good film no?", 14);
 
 	//////////////////////////////////film constructor tests ////////////////////////////////////////////
-
 	@Test
 	public void testForFilmTitle(){
 		assertEquals("movieName",testFilm.getMovieName(),"Film title constructor not working");
