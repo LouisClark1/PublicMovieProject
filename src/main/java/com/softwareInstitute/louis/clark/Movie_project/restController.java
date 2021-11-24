@@ -2,12 +2,16 @@ package com.softwareInstitute.louis.clark.Movie_project;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
 
 @RestController
+@CrossOrigin(origins = "http://localhost:3000")
 public class restController {
 
     @Autowired
@@ -50,11 +54,19 @@ public class restController {
         return movieRepositoryInstance.count();
     }
 
-    @PostMapping("/addMovie")
-    public @ResponseBody String addAMovie (@RequestParam String movieName, @RequestParam int languageId, @RequestParam String description, @RequestParam Integer length) {
-        Movie savedMovie = new Movie(movieName,languageId, description, length);
-        movieRepositoryInstance.save(savedMovie);
-        return "Saved";
+
+//    @PostMapping("/addMovie")
+//    public @ResponseBody String addAMovie (@RequestParam String movieName, @RequestParam int languageId, @RequestParam String description, @RequestParam Integer length) {
+//        Movie savedMovie = new Movie(movieName,languageId, description, length);
+//        movieRepositoryInstance.save(savedMovie);
+//        return "Saved";
+//    }
+
+    @PostMapping(path="/addMovie", consumes = {MediaType.APPLICATION_JSON_VALUE}, produces = {MediaType.APPLICATION_JSON_VALUE})
+    public ResponseEntity<Movie> addAFilm(@RequestBody Movie newFilm) {
+        Movie savedFilm = new Movie(newFilm.getMovieName(), newFilm.getLanguageId(), newFilm.getDescription(), newFilm.getLength());
+        movieRepositoryInstance.save(savedFilm);
+        return new ResponseEntity<Movie>(savedFilm, HttpStatus.OK);
     }
 
     @PostMapping("/addActor")
