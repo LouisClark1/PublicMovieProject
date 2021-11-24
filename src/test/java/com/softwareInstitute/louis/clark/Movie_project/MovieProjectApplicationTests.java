@@ -7,7 +7,7 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-@SpringBootTest
+//@SpringBootTest
 class MovieProjectApplicationTests {
 
 	Movie testFilm = new Movie("movieName", 4, "Is good film no?", 14);
