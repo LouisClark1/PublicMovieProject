@@ -17,6 +17,7 @@ pipeline {
         stage('Build') {
             steps {
                 dir("/var/lib/jenkins//workspace/TSIFullStack/Movie_project_git") {
+                    sh'git config --global user.name "LouisClark1"'
 //                 sh 'sudo mvn clean package'
                     checkout scm
 //                 sh 'sudo su'
