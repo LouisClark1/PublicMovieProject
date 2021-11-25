@@ -34,7 +34,6 @@ public class AppConfig {
                 .build();
 
     }
-
     
     private AWSSecrets getSecret() {
 
