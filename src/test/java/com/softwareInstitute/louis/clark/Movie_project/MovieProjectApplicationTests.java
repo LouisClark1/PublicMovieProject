@@ -37,7 +37,6 @@ class MovieProjectApplicationTests {
 	public void testForActorFirstName(){
 		assertEquals("Testy", testActor.getActorFirstName(), "Actor first name constructor error");
 	}
-
 	@Test
 	public void testForActorLastName(){
 		assertEquals("McTestFace",testActor.getActorSurname(),"Actor last name constructor error");
