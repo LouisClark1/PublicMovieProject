@@ -17,7 +17,6 @@ class MovieProjectApplicationTests {
 	public void testForFilmTitle(){
 		assertEquals("movieName",testFilm.getMovieName(),"Film title constructor not working");
 	}
-
 	@Test
 	public void testForFilmLanguage(){
 		assertEquals(4,testFilm.getLanguageId(),"Film language constructor not working");
