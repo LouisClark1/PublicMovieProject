@@ -32,9 +32,8 @@ public class AppConfig {
                 .username(secrets.getUsername())
                 .password(secrets.getPassword())
                 .build();
-
     }
-    
+
     private AWSSecrets getSecret() {
 
         String secretName = "TestingDB";
