@@ -35,7 +35,6 @@ public class AppConfig {
     }
 
     private AWSSecrets getSecret() {
-
         String secretName = "TestingDB";
         String region = "us-east-2";
         // Create a Secrets Manager client
