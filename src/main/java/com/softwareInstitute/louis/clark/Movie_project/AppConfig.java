@@ -35,8 +35,7 @@ public class AppConfig {
 
     }
 
-
-
+    
     private AWSSecrets getSecret() {
 
         String secretName = "TestingDB";
