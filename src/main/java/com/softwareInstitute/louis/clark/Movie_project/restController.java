@@ -20,6 +20,7 @@ public class restController {
     @Autowired
     private ActorRepository actorRepositoryInstance;
 
+    
     @GetMapping("/movies/all")
     public @ResponseBody
     Iterable<Movie> getAllMovies() {
